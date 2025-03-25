@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="POST" enctyope="multipart/form-data"> <!-- enctype="multipart/form-data" necessário para upload de arquivos -->
+        {% csrf_token %}
+
+        {{ novo_filme_form }}
+
+    </form>
+{% endblock %}    
